@@ -117,6 +117,17 @@
 
 <body>
 
+   <!-- AUDIO -->
+  <audio id="suono1b1">
+    <source src="VOCELUI.mp3" type="audio/mp3">
+  </audio>
+  <audio id="suono1b2">
+    <source src="VOCELEI.mp3" type="audio/mp3">
+  </audio>
+  <audio id="suono2b1">
+    <source src="BIMBO.mp3" type="audio/mp3">
+  </audio>
+  
   <!-- SCHERMATA INIZIALE -->
   <div id="schermata-iniziale" class="fadeIn">
     <h1>Ciao, so che non mi conosci, sono qui per chiederti... vuoi essere la mia Valentina?</h1>
@@ -318,13 +329,28 @@
 
     // LIVELLO 3 - Da risultato-1b
     function scelta1b1() {
-      mostraSchermata("risultato-1b1");
-    }
+  let suono = document.getElementById('suono1b1');
+  suono.play();
+  
+  setTimeout(() => {
+    suono.pause();
+    suono.currentTime = 0;
+  }, 5000);
+  
+  mostraSchermata("risultato-1b1");
+}
 
-    function scelta1b2() {
-      mostraSchermata("risultato-1b2");
-    }
-
+function scelta1b2() {
+  let suono = document.getElementById('suono1b2');
+  suono.play();
+  
+  setTimeout(() => {
+    suono.pause();
+    suono.currentTime = 0;
+  }, 5000);
+  
+  mostraSchermata("risultato-1b2");
+}
     // LIVELLO 3 - Da risultato-2a
     function scelta2a1() {
       mostraSchermata("risultato-2a1");
@@ -336,9 +362,16 @@
 
     // LIVELLO 3 - Da risultato-2b
     function scelta2b1() {
-      mostraSchermata("risultato-2b1");
-    }
-
+  let suono = document.getElementById('suono2b1');
+  suono.play();
+  
+  setTimeout(() => {
+    suono.pause();
+    suono.currentTime = 0;
+  }, 5000);
+  
+  mostraSchermata("risultato-2b1");
+}
     function scelta2b2() {
       mostraSchermata("risultato-2b2");
     }
